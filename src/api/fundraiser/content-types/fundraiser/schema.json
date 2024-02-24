@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fundraisers",
+  "info": {
+    "singularName": "fundraiser",
+    "pluralName": "fundraisers",
+    "displayName": "fundraiser"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "deskripsi": {
+      "type": "text"
+    },
+    "alamat": {
+      "type": "string"
+    },
+    "telepon": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "website": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "logoLink": {
+      "type": "string"
+    },
+    "causes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cause.cause",
+      "mappedBy": "fundraiser"
+    }
+  }
+}

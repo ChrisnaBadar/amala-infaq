@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donation_callback_histories",
+  "info": {
+    "singularName": "donation-callback-history",
+    "pluralName": "donation-callback-histories",
+    "displayName": "donationCallbackHistory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "history": {
+      "type": "json"
+    }
+  }
+}

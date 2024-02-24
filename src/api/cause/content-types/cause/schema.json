@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "causes",
+  "info": {
+    "singularName": "cause",
+    "pluralName": "causes",
+    "displayName": "cause",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "targetDonation": {
+      "type": "biginteger"
+    },
+    "dateStart": {
+      "type": "datetime"
+    },
+    "dateEnd": {
+      "type": "datetime"
+    },
+    "urgentCause": {
+      "type": "boolean"
+    },
+    "featuredCause": {
+      "type": "boolean"
+    },
+    "imageLink": {
+      "type": "string"
+    },
+    "donations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::donation.donation",
+      "mappedBy": "cause"
+    },
+    "en_title": {
+      "type": "string"
+    },
+    "en_description": {
+      "type": "blocks"
+    },
+    "fundraiser": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fundraiser.fundraiser",
+      "inversedBy": "causes"
+    }
+  }
+}

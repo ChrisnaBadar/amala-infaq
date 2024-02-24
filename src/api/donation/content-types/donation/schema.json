@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donations",
+  "info": {
+    "singularName": "donation",
+    "pluralName": "donations",
+    "displayName": "donation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "nominal": {
+      "type": "biginteger"
+    },
+    "kontak": {
+      "type": "string"
+    },
+    "pesan": {
+      "type": "text"
+    },
+    "donationStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Diproses",
+        "Diterima",
+        "Gagal"
+      ]
+    },
+    "email": {
+      "type": "email"
+    },
+    "alamat": {
+      "type": "text"
+    },
+    "cause": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cause.cause",
+      "inversedBy": "donations"
+    }
+  }
+}
